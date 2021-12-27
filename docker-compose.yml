@@ -1,15 +1,15 @@
 version: '3.8'
 services:
     app:
-        image: dika6/kuis2_baru
-        container_name: web-server
+        image: dika6/kuis2_dikaayu
+        container_name: php-apache
         build:
-            context: ./php
+            context: ./kuis
             dockerfile: Dockerfile
         depends_on:
             - db
         volumes:
-            - ./php/src:/var/www/html/
+            - ./kuis/kuis2_terbaru:/var/www/html/
         ports:
             - 8000:80
 
